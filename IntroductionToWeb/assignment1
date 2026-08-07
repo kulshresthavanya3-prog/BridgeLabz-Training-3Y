@@ -1,1 +1,89 @@
 
+                                                                   ASSIGNMENT
+            Name:Vanya Kulshrestha                     Section:AB                               Roll.No:68
+1.Explain the difference between frontend, backend, and full-stack development with
+suitable real-world examples.
+ Frontend Development: Builds the user interface using HTML, CSS, and JavaScript.
+ Backend Development: Handles server logic, databases, and APIs using languages like Java or Python.
+ Full-Stack Development: Works on both frontend and backend.
+ Example: An online shopping website where users browse products (frontend), orders are processed (backend), and a full-stack developer manages both.
+
+2. Create a simple diagram showing how the client-server model works in web architecture.
+| Client  | -----------------> |  Server   |
+| Browser |                     | (Website) |
+|         | <------------------ |           |
++---------+      Response       +-----------+
+The client sends a request to the server. The server processes it and returns the requested web page or data to the browser.
+
+3. Describe how a browser requests and displays a web page from a web server.
+    When a user enters a website address, the browser sends an HTTP/HTTPS request to the web server. The server processes the request and returns HTML, CSS, JavaScript, and other files. The browser renders these files and displays the web page on the user's screen.
+
+4. Identify and list the tools required to set up a web development environment. Explain the
+purpose of each.
+
+ •	VS Code: Source code editor. 
+ •	Web Browser: Tests and displays web pages. 
+ •	Node.js: Runs JavaScript outside the browser. 
+ •	Git: Tracks code changes. 
+ •	GitHub: Stores and shares projects online. 
+ •	Live Server Extension: Automatically refreshes web pages during development. 
+
+5. Explain what a web server is and give examples of commonly used servers.
+  A web server is software or hardware that receives requests from web browsers and delivers web pages or application data using HTTP or HTTPS. Common web servers include Apache HTTP Server, Nginx, Microsoft IIS, and lite speed which host websites and web applications.
+
+6. Define the roles of a frontend developer, backend developer, and database administrator
+in a project.
+
+ •	Frontend Developer: Designs and develops the user interface. 
+ •	Backend Developer: Creates server-side logic, APIs, and manages application functionality. 
+ •	Database Administrator (DBA): Designs, secures, maintains, and optimizes databases to ensure data storage, backup, and fast retrieval. 
+
+8. Explain the difference between static and dynamic websites. Provide an example of
+each.
+
+ A static website displays the same content to every visitor and uses only HTML and CSS. Example: A personal portfolio website. A dynamic website generates content based on user interactions and databases. Example: Facebook, Amazon, or an online banking website.
+
+9. Research and list five web browsers. Explain how rendering engines differ between
+them.
+
+ •	Google Chrome – Blink 
+ •	Microsoft Edge – Blink 
+ •	Mozilla Firefox – Gecko 
+ •	Apple Safari – WebKit 
+ •	Opera – Blink 
+ Rendering engines interpret HTML, CSS, and JavaScript differently, affecting webpage speed, compatibility, and performance across browsers.
+
+10. Draw a labeled diagram showing the basic web architecture flow — client, server,
+database, and APIs.
+             User
+              |
+              v 
+       +----------------+
+       | Client Browser |
+       +----------------+
+              |
+          HTTP Request
+              |
+              v 
+      +----------------+
+       |  Web Server   |
+      +----------------+
+         |          |
+         |          |
+         v          v
+      +-------+ +------+
+
+  |    APIs  |  | Database  |
+ +----------+  +-----------+
+        |            |
+        +------------+
+              |
+         HTTP Response
+              |
+              v
+      +----------------+
+      | Client Browser |
+      +----------------+
+ The client sends a request to the web server. The server communicates with APIs and databases, processes the request, and returns the response to the browser for display.
+
+
