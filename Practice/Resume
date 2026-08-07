@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 style="text-align: center;">Vanya Kulshrestha</h1>
 
+   <h3 style="text-align: center;">Phone no: 9084528563 &nbsp; Email: vanyakulshrestha2006@gmail.com &nbsp; Github: vanya-3prog</h3>
+   <h2>Profile</h2>
+   <p>A data analyst aspirant having keen interest in data analysis and visualisation by extracting hidden insights from semistructured or the unstructered data to make predictive machine learning models for effective decision making</p>
+   <hr>
+   <h2>WORK EXPERIENCE</h2>
+   <h3> Data Analyst Intern at Elevate Labs</h3>
+    This was a remote internship where we analysed the meaningful extracts fromthe data collected through web scrapping and kaggle.These collected datsets were preprocessed and then visualized through graphs in form of <i>bar graph,histogram,pie chat,line charts</i>.
+    
+    
+    Used data visualization tools such  as Power Bi for visual representation of the patterns of the data
+    <hr>
+    <h2>EDUCATION</h2>
+    <p>St Mary's Inter College  CBSE Board 94.6%</p>
+    <p>St.Vivekanad Sr. Sec. Public School CBSE Board 89%</p>
+    <p>GLA UNIVERSITY Btech CGPA:8.1</p>
+    <hr>
+    <h2>ACADEMIC PROJECTS</h2>
+    <h3>Energy Forecasting Dashboard</h3>
+    <p>This is an ML based project where the datsets having elctric consumption data to predict the energy demand with respect to time of consumption of energy .This system takes datsets as the input and can  be visualised thorugh various graphs </p>
+    <hr>
+    <h2>SKILLS</h2>
+    <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>SQL</li>
+        <li>DBMS</li>
+        <li>Statistics</li>
+    </ul>
+    <hr>
+    <h2>CERTIFICATIONS</h2>
+    <ul>
+        <li>
+            Introduction to Digital Cloud Transformation
+        </li>
+        <li>
+            Fundamentals Of MS Excel
+        </li>
+
+    </ul>
+    <hr>
+    <h2>Languages</h2>
+    <ul>
+        <li>English</li>
+        <li>Hindi</li>
+    </ul>
+    <hr>
+    </body>
+</html>
