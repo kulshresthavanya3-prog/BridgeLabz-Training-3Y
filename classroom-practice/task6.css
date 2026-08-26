@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f2f5f8;
+    font-family: Arial, sans-serif;
+}
+
+/* Main Card */
+.card {
+    width: 270px;
+    height: 425px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+
+    margin: 70px auto;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Image area */
+.image-section {
+    width: 100%;
+    height: 210px;
+    background-color: #e60012;
+
+    position: relative;
+}
+
+/* Shoe image */
+.shoe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Discount */
+.discount {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+
+    background-color: #ff0000;
+    color: white;
+
+    padding: 6px 10px;
+    border-radius: 15px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Heart */
+.heart {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: white;
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 38px;
+
+    font-size: 30px;
+}
+
+/* Product information */
+.details {
+    position: relative;
+    height: 215px;
+    padding: 25px 17px;
+}
+
+/* Category */
+.category {
+    display: inline-block;
+
+    color: #1769d1;
+    background-color: #dceaff;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+/* Product name */
+h2 {
+    margin: 0;
+
+    color: #1769d1;
+    font-size: 18px;
+}
+
+/* Rating */
+.rating {
+    margin-top: 8px;
+
+    color: #e4b400;
+    font-size: 17px;
+}
+
+.rating span {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Price */
+.price {
+    margin-top: 12px;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.price del {
+    margin-left: 8px;
+
+    color: #999;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Button */
+button {
+    position: absolute;
+
+    left: 17px;
+    right: 17px;
+    bottom: 15px;
+
+    width: calc(100% - 34px);
+    height: 35px;
+
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 14px;
+}
+
+box-heart{
+    width:100px;
+    height:100px;
+    background-color:red;
+}
+.heart{
+    margin:20px;
+    width:20px;
+    height:20x;
+ 
+}
+.box{
+    border:4px solid red;
+    height:200px;
+    width:300px;
+    overflow:scroll;
+
+}
+p{
+    font-size: 1.2rem;
+}
