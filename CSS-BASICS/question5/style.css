@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+
+    background-color: #f2f5f9;
+
+    padding: 50px 8%;
+}
+
+
+/* Main heading */
+body > h1 {
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: 2.5rem;
+}
+
+
+/* Pricing container */
+.pricing-container {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+/* Individual plans */
+.plan {
+    width: 33.33%;
+
+    background-color: white;
+
+    border: 2px solid #ccc;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    /* Equal height */
+    display: flex;
+    flex-direction: column;
+
+    /* Smooth animation */
+    transition: transform 0.3s ease,
+                background-color 0.3s ease;
+}
+
+
+/* Hover effect */
+.plan:hover {
+    transform: scale(1.05);
+
+    background-color: #e8f4ff;
+}
+
+
+/* Plan heading */
+.plan h2 {
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* Price */
+.price {
+    font-size: 2rem;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+
+.price span {
+    font-size: 1rem;
+
+    font-weight: normal;
+
+    color: #666;
+}
+
+
+/* Features */
+.plan ul {
+    list-style: none;
+
+    margin-bottom: 30px;
+}
+
+
+.plan li {
+    padding: 10px;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+/* Button */
+.btn {
+    display: inline-block;
+
+    margin-top: auto;
+
+    padding: 12px 25px;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+
+    transition: background-color 0.3s ease;
+}
+
+
+/* Button hover */
+.btn:hover {
+    background-color: #1746a2;
+}
+
+
+/* Popular plan */
+.popular {
+    border: 3px solid #f59e0b;
+
+    background-color: #fffaf0;
+
+    position: relative;
+}
+
+
+/* Popular text */
+.popular-text {
+    background-color: #f59e0b;
+
+    color: white;
+
+    padding: 6px 15px;
+
+    border-radius: 20px;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+
+/* Mobile responsive */
+@media (max-width: 700px) {
+
+    .pricing-container {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 100%;
+    }
+}
