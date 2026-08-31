@@ -1,0 +1,184 @@
+/* Remove default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #172033;
+
+    /* Flexbox for footer */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Fixed Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    background-color: #172033;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 5%;
+    z-index: 1000;
+}
+
+
+/* Name */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 2em;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+
+nav a:hover {
+    color: #64d8cb;
+}
+
+
+/* Main */
+main {
+    flex: 1;
+
+    /* Header is fixed, so give space at top */
+    padding-top: 70px;
+}
+
+
+/* Home section */
+.home {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 50px 8%;
+}
+
+
+/* Introduction */
+.intro {
+    width: 50%;
+}
+
+
+.intro h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* Button */
+button {
+    padding: 12px 25px;
+    border: none;
+
+    background-color: #172033;
+    color: white;
+
+    font-size: 1rem;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #64d8cb;
+    color: #172033;
+}
+
+
+/* Profile image */
+.profile {
+    width: 35%;
+    text-align: center;
+}
+
+
+.profile img {
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 5px solid #172033;
+}
+
+
+/* About and Contact */
+section:not(.home) {
+    min-height: 40vh;
+
+    padding: 60px 10%;
+
+    text-align: center;
+}
+
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+section p {
+    max-width: 700px;
+    margin: auto;
+
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+
+/* Footer */
+footer {
+    background-color: #172033;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 1rem;
+}
