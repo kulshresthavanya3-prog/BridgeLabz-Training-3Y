@@ -1,0 +1,68 @@
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    min-height: 100vh;
+}
+
+.card {
+    width: 250px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+    /* Fade-in animation */
+    animation: fadeIn 1s;
+}
+
+/* Middle card */
+.popular {
+    transform: scale(1.1);
+    background: lightblue;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Keep middle card larger on hover */
+.popular:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 750px) {
+    .pricing {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .popular {
+        transform: scale(1);
+    }
+
+    .popular:hover {
+        transform: translateY(-10px);
+    }
+}
