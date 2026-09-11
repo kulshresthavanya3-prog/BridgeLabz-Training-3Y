@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+/* Flexbox */
+.container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Common box properties */
+.box {
+    padding: 20px;
+    text-align: center;
+    overflow: auto;
+}
+
+/* Box 1 */
+.box1 {
+    width: 200px;
+    height: 150px;
+    background-color: lightblue;
+}
+
+/* Box 2 */
+.box2 {
+    width: 40%;
+    height: 30vh;
+    min-height: 150px;
+    background-color: lightgreen;
+}
+
+/* Box 3 */
+.box3 {
+    width: 15em;
+    height: 200px;
+    max-width: 250px;
+    overflow: hidden;
+    background-color: lightcoral;
+}
