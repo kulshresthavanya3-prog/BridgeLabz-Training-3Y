@@ -1,0 +1,144 @@
+/* =============================== */
+/* ELEMENT SELECTOR */
+/* =============================== */
+
+/* Selects all paragraph elements */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* =============================== */
+/* CLASS SELECTOR */
+/* =============================== */
+
+/* Selects elements having class="highlight" */
+.highlight {
+    background-color: yellow;
+    padding: 10px;
+}
+
+
+/* =============================== */
+/* ID SELECTOR */
+/* =============================== */
+
+/* Selects the element having id="special-heading" */
+#special-heading {
+    color: blue;
+    text-decoration: underline;
+}
+
+
+/* =============================== */
+/* ATTRIBUTE SELECTOR */
+/* =============================== */
+
+/* Selects input elements having type="text" */
+input[type="text"] {
+    border: 2px solid blue;
+    padding: 10px;
+}
+
+/* Selects links whose href starts with "https" */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* =============================== */
+/* DESCENDANT COMBINATOR */
+/* =============================== */
+
+/* Selects all p elements inside .combinators */
+.combinators p {
+    color: purple;
+}
+
+
+/* =============================== */
+/* CHILD COMBINATOR (>) */
+/* =============================== */
+
+/* Selects only p elements that are direct children of .combinators */
+.combinators > p {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+
+/* =============================== */
+/* ADJACENT SIBLING (+) */
+/* =============================== */
+
+/* Selects the p immediately after the div */
+.combinators div + p {
+    border-left: 5px solid red;
+    padding-left: 10px;
+}
+
+
+/* =============================== */
+/* GENERAL SIBLING (~) */
+/* =============================== */
+
+/* Selects all p elements that come after the div */
+.combinators div ~ p {
+    margin-left: 20px;
+}
+
+
+/* =============================== */
+/* BASIC PAGE STYLING */
+/* =============================== */
+
+/* Gives the whole page clean spacing */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 30px;
+}
+
+/* Main content spacing */
+main {
+    padding: 30px;
+}
+
+/* Section styling */
+section {
+    background-color: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 700px;
+    border-radius: 10px;
+}
+
+/* Link spacing */
+a {
+    margin-right: 20px;
+}
+
+/* List spacing */
+li {
+    padding: 8px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
