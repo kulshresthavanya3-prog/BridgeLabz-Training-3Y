@@ -1,0 +1,100 @@
+```css id="9u0v4k"
+/* Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Main */
+main {
+    display: flex;
+    gap: 20px;
+
+    padding: 40px;
+
+    flex: 1;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Feature Boxes */
+.feature-box {
+    width: 250px;
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* Hover Effect */
+.feature-box:hover {
+    transform: scale(1.05);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+
+    background-color: #333;
+    color: white;
+}
+
+
+/* Responsive Design */
+@media (max-width: 750px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .feature-box {
+        width: 80%;
+    }
+}
+```
