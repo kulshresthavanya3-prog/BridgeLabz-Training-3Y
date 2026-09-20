@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    display: grid;
+
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 80px 1fr;
+    gap: 20px;
+}
+
+/* Header */
+header {
+    grid-column: 1 / -1;
+    background: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Sidebar */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background: lightgray;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgreen;
+
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px gray;
+}
+
+/* Box spans two columns */
+.wide {
+    grid-column: span 2;
+}

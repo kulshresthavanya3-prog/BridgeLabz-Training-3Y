@@ -1,0 +1,135 @@
+/* ============================= */
+/* ATTRIBUTE SELECTORS */
+/* ============================= */
+
+/* Selects all input elements having type="text" */
+input[type="text"] {
+    border: 3px solid blue;
+    background-color: lightblue;
+}
+
+/* Selects links whose href starts with "https" */
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+
+
+/* ============================= */
+/* PSEUDO-CLASSES */
+/* ============================= */
+
+/* :hover - applies style when mouse is over the element */
+button:hover {
+    background-color: green;
+    color: white;
+}
+
+/* :focus - applies style when input is selected */
+input:focus {
+    background-color: lightyellow;
+    border-color: red;
+}
+
+/* :nth-child() - selects a specific child */
+li:nth-child(2) {
+    color: blue;
+    font-weight: bold;
+}
+
+li:nth-child(4) {
+    color: red;
+}
+
+
+/* ============================= */
+/* PSEUDO-ELEMENTS */
+/* ============================= */
+
+/* ::before - adds content before the heading */
+h2::before {
+    content: "★ ";
+    color: orange;
+}
+
+/* ::after - adds content after the heading */
+h2::after {
+    content: " ✓";
+    color: green;
+}
+
+
+/* ============================= */
+/* COMBINATORS */
+/* ============================= */
+
+/* Descendant selector (space)
+   Selects all p elements inside .content */
+.content p {
+    color: purple;
+}
+
+/* Child selector (>)
+   Selects only p elements that are direct children of .content */
+.content > p {
+    background-color: lightgray;
+}
+
+/* Adjacent sibling selector (+)
+   Selects the first p immediately after h2 */
+.content h2 + p {
+    border-left: 5px solid blue;
+    padding: 10px;
+}
+
+/* General sibling selector (~)
+   Selects all p elements that come after h2 */
+.content h2 ~ p {
+    margin-left: 20px;
+}
+
+
+/* ============================= */
+/* BASIC PAGE STYLING */
+/* ============================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.form,
+.links,
+.items,
+.content {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+a {
+    margin-right: 20px;
+}
+
+li {
+    padding: 8px;
+}
