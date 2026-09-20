@@ -1,0 +1,49 @@
+```css id="r8y5qd"
+/* Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Content Section */
+.content {
+    text-align: center;
+
+    padding: 80px 40px;
+    margin: 50px auto;
+
+    max-width: 900px;
+}
+
+/* Heading */
+h1 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+
+    margin-bottom: 25px;
+}
+
+/* Paragraph */
+p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+
+    line-height: 1.6;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .content {
+        padding: 50px 20px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        margin-bottom: 15px;
+    }
+
+    p {
+        line-height: 1.8;
+    }
+}
+```
