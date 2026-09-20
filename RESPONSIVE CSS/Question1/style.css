@@ -1,0 +1,81 @@
+```css
+/* Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Image box */
+.item {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Images */
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    transition: filter 0.5s ease;
+}
+
+/* Filters */
+.blur {
+    filter: blur(4px);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+.brightness {
+    filter: brightness(50%);
+}
+
+.contrast {
+    filter: contrast(200%);
+}
+
+.hue {
+    filter: hue-rotate(90deg);
+}
+
+/* Remove filter on hover */
+.item img:hover {
+    filter: none;
+}
+
+/* Caption */
+.item p {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* One column below 600px */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+```
