@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Promotion Checker</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        input {
+            margin: 8px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Promotion Checker</h2>
+
+        <input type="number" id="s1" placeholder="Subject 1" min="0" max="100"><br>
+        <input type="number" id="s2" placeholder="Subject 2" min="0" max="100"><br>
+        <input type="number" id="s3" placeholder="Subject 3" min="0" max="100"><br>
+        <input type="number" id="s4" placeholder="Subject 4" min="0" max="100"><br>
+        <input type="number" id="s5" placeholder="Subject 5" min="0" max="100"><br>
+
+        <button onclick="checkResult()">Check Result</button>
+
+        <h3 id="average"></h3>
+        <h3 id="percentage"></h3>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function checkResult() {
+            let marks = [
+                Number(document.getElementById("s1").value),
+                Number(document.getElementById("s2").value),
+                Number(document.getElementById("s3").value),
+                Number(document.getElementById("s4").value),
+                Number(document.getElementById("s5").value)
+            ];
+
+            if (marks.some(mark => mark < 0 || mark > 100) ||
+                [1, 2, 3, 4, 5].some(i =>
+                    document.getElementById("s" + i).value === "")) {
+                alert("Enter marks between 0 and 100 for all subjects.");
+                return;
+            }
+
+            let total = 0;
+
+            for (let mark of marks) {
+                total += mark;
+            }
+
+            let average = total / marks.length;
+            let percentage = (total / 500) * 100;
+            let message = "";
+
+            if (marks.some(mark => mark < 35) || percentage < 50) {
+                message = "Detained";
+            } else if (percentage >= 85 && percentage <= 100) {
+                message = "Promoted with Distinction";
+            } else if (percentage >= 50 && percentage < 85) {
+                message = "Promoted";
+            }
+
+            document.getElementById("average").textContent =
+                `Average Marks: ${average.toFixed(2)}`;
+
+            document.getElementById("percentage").textContent =
+                `Overall Percentage: ${percentage.toFixed(2)}%`;
+
+            document.getElementById("result").textContent = message;
+        }
+    </script>
+
+</body>
+</html>
