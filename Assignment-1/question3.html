@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Monthly Expenses</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        input {
+            margin: 8px;
+            padding: 8px;
+        }
+
+        h3 {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Monthly Expense Calculator</h2>
+
+        <label>Food: </label>
+        <input type="number" id="food" value="3000" oninput="calculate()"><br>
+
+        <label>Travel: </label>
+        <input type="number" id="travel" value="1500" oninput="calculate()"><br>
+
+        <label>Rent: </label>
+        <input type="number" id="rent" value="8000" oninput="calculate()"><br>
+
+        <label>Bills: </label>
+        <input type="number" id="bills" value="1000" oninput="calculate()"><br>
+
+        <label>Leisure: </label>
+        <input type="number" id="leisure" value="500" oninput="calculate()"><br>
+
+        <hr>
+
+        <h3 id="total">Total: ₹0.00</h3>
+        <h3 id="average">Average: ₹0.00</h3>
+        <h3 id="final">Final Amount: ₹0.00</h3>
+    </div>
+
+    <script>
+        function calculate() {
+            let expenses = [
+                Number(document.getElementById("food").value) || 0,
+                Number(document.getElementById("travel").value) || 0,
+                Number(document.getElementById("rent").value) || 0,
+                Number(document.getElementById("bills").value) || 0,
+                Number(document.getElementById("leisure").value) || 0
+            ];
+
+            let total = 0;
+
+            for (let expense of expenses) {
+                total += expense;
+            }
+
+            let average = total / expenses.length;
+
+            let tax = total * 0.10;
+            total += tax;
+
+            document.getElementById("total").textContent =
+                `Total: ₹${(total - tax).toFixed(2)}`;
+
+            document.getElementById("average").textContent =
+                `Average: ₹${(average).toFixed(2)}`;
+
+            document.getElementById("final").textContent =
+                `Final Amount (including 10% tax): ₹${total.toFixed(2)}`;
+        }
+
+        calculate();
+    </script>
+
+</body>
+</html>
