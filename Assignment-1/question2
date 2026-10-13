@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Summary</title>
+</head>
+<body>
+
+    <h2>Check the console for the database report</h2>
+
+    <script>
+        let userName = "Vanya";
+        let age = 20;
+        let isActive = true;
+        let skills = ["Java", "Python", "HTML"];
+        let user = { city: "Mathura", role: "Student" };
+        let address = null;
+        let phone;
+
+        let data = [
+            { label: "User Name", value: userName, type: typeof userName },
+            { label: "Age", value: age, type: typeof age },
+            { label: "Active", value: isActive, type: typeof isActive },
+            { label: "Skills", value: skills.join(", "), type: Array.isArray(skills) ? "array" : typeof skills },
+            { label: "User Object", value: JSON.stringify(user), type: Array.isArray(user) ? "array" : typeof user },
+            { label: "Address", value: address, type: address === null ? "null" : typeof address },
+            { label: "Phone", value: phone, type: typeof phone }
+        ];
+
+        console.table(data);
+    </script>
+
+</body>
+</html>
