@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Greeting</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px gray;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        p {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="greeting">Welcome!</h1>
+        <p id="time">Have a wonderful day!</p>
+    </div>
+
+    <script>
+        let userName = prompt("Enter your name:");
+        let hour = new Date().getHours();
+        let message = "";
+
+        if (hour < 12) {
+            message = `Good Morning ${userName}!`;
+        } else if (hour <= 17) {
+            message = `Good Afternoon ${userName}!`;
+        } else {
+            message = `Good Evening ${userName}!`;
+        }
+
+        document.getElementById("greeting").textContent = message;
+        document.getElementById("time").textContent =
+            `Current hour: ${hour}`;
+    </script>
+
+</body>
+</html>
