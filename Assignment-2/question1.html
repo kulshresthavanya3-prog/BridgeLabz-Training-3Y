@@ -1,0 +1,71 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payroll System</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+            background-color: lightblue;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            margin: auto;
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Payroll System</h2>
+
+        <p id="result">Click a button to calculate salary.</p>
+
+        <button onclick="calculateSalary(true)">
+            Permanent Employee
+        </button>
+
+        <button onclick="calculateSalary(false)">
+            Temporary Employee
+        </button>
+
+        <p id="bonus"></p>
+    </div>
+
+    <script>
+        // Global variable
+        let bonus = 5000;
+
+        function calculateSalary(isPermanent) {
+            // Local variable
+            let salary = 40000;
+
+            if (isPermanent) {
+                salary = salary + bonus;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Total Salary: ₹" + salary;
+
+            document.getElementById("bonus").innerHTML =
+                "Global Bonus: ₹" + bonus +
+                "<br>Permanent: " + isPermanent;
+        }
+    </script>
+
+</body>
+</html>
+```
