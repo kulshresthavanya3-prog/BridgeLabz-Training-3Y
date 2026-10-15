@@ -1,0 +1,81 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Home Security</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background-color: lightblue;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            margin: auto;
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 8px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Smart Home Security</h2>
+
+        <p id="status"></p>
+        <p id="result"></p>
+
+        <button onclick="checkSecurity()">Check Security</button>
+        <button onclick="changeValues()">Change Values</button>
+    </div>
+
+    <script>
+        let isDoorLocked = true;
+        let isWindowClosed = true;
+        let isAlarmOn = true;
+        let isOwnerInside = true;
+
+        function checkSecurity() {
+            document.getElementById("status").innerHTML =
+                `Door Locked: ${isDoorLocked}<br>
+                 Window Closed: ${isWindowClosed}<br>
+                 Alarm On: ${isAlarmOn}<br>
+                 Owner Inside: ${isOwnerInside}`;
+
+            if (isAlarmOn && isDoorLocked && isWindowClosed && isOwnerInside) {
+                document.getElementById("result").innerHTML = "Secure";
+            } else {
+                document.getElementById("result").innerHTML = "Unsafe";
+            }
+        }
+
+        function changeValues() {
+            isDoorLocked = !isDoorLocked;
+            isWindowClosed = !isWindowClosed;
+            isAlarmOn = !isAlarmOn;
+            isOwnerInside = !isOwnerInside;
+
+            checkSecurity();
+        }
+
+        checkSecurity();
+    </script>
+
+</body>
+</html>
+```
