@@ -1,0 +1,82 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Analysis</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 60px;
+            background-color: lightblue;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            margin: auto;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        #result {
+            text-align: left;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Performance</h2>
+
+        <button onclick="analyzeScores()">Analyze Scores</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function analyzeScores() {
+
+            // Generate 8 random scores between 30 and 100
+            let arr = Array.from({ length: 8 }, () =>
+                Math.floor(Math.random() * 71) + 30
+            );
+
+            // Use map() to display scores
+            let scores = arr.map(x => x);
+
+            // Find highest and lowest scores
+            let highest = Math.max(...arr);
+            let lowest = Math.min(...arr);
+
+            // Calculate average using reduce()
+            let total = arr.reduce((sum, x) => sum + x, 0);
+            let average = total / arr.length;
+
+            // Count students who passed using filter()
+            let passed = arr.filter(x => x >= 50).length;
+
+            // Display summary
+            let summary = `
+                <b>Student Scores:</b> ${scores.join(", ")}<br>
+                <b>Highest Score:</b> ${highest}<br>
+                <b>Lowest Score:</b> ${lowest}<br>
+                <b>Average Score:</b> ${average.toFixed(2)}<br>
+                <b>Students Passed:</b> ${passed} out of ${arr.length}<br>
+                <b>Students Failed:</b> ${arr.length - passed}
+            `;
+
+            document.getElementById("result").innerHTML = summary;
+        }
+    </script>
+
+</body>
+</html>
+```
