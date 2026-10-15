@@ -1,0 +1,63 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Manipulation Report</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+            background-color: lightblue;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            margin: auto;
+            width: 400px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Product Title Formatter</h2>
+
+        <button onclick="formatTitle()">Format Title</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function formatTitle() {
+            let product = " wireless headphones PRO ";
+
+            // Remove extra spaces and convert to lowercase
+            product = product.trim().toLowerCase();
+
+            // Capitalize the first letter of each word
+            product = product.split(" ").map(word =>
+                word.charAt(0).toUpperCase() + word.slice(1)
+            ).join(" ");
+
+            // Replace Pro with Pro Edition
+            product = product.replace("Pro", "Pro Edition");
+
+            // Display title and its length
+            document.getElementById("result").innerHTML =
+                "Cleaned Title: " + product +
+                "<br>Length: " + product.length;
+        }
+    </script>
+
+</body>
+</html>
+```
