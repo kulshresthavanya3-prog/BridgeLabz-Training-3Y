@@ -1,0 +1,67 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 80px;
+            background-color: lightblue;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            margin: auto;
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        #result {
+            text-align: left;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Scientific Calculator</h2>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            let x = 16.75;
+
+            let rounded = Math.round(x);
+            let root = Math.sqrt(x);
+            let power = Math.pow(x, 3);
+            let random = Math.floor(Math.random() * 41) + 10;
+
+            let summary = `
+                Number: ${x}<br>
+                Rounded Value: ${rounded}<br>
+                Square Root: ${root.toFixed(2)}<br>
+                Power (x³): ${power.toFixed(2)}<br>
+                Random Number (10–50): ${random}
+            `;
+
+            document.getElementById("result").innerHTML = summary;
+        }
+    </script>
+
+</body>
+</html>
+```
