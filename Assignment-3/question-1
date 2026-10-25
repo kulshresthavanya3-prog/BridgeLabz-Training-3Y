@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+const apiData = ["25", "true", "false", "NaN", " ", "100px", "3.14", null, undefined];
+
+let valid = [];
+let invalid = [];
+
+for (let i = 0; i < apiData.length; i++) {
+    let value = apiData[i];
+
+    let num = Number(value);
+    let bool = Boolean(value);
+    let str = String(value);
+
+    if (value === null || value === undefined || 
+        str.trim() === "" || !Number.isFinite(num)) {
+        invalid.push(value);
+
+        console.log("INVALID:", value,
+                    "| Number:", num,
+                    "| Boolean:", bool,
+                    "| String:", str);
+    } 
+    else {
+        valid.push(num);
+
+        console.log("VALID:", value,
+                    "| Number:", num,
+                    "| Boolean:", bool,
+                    "| String:", str);
+    }
+}
+
+console.log("Valid Numeric Data:", valid);
+console.log("Invalid Data:", invalid);
+</script>
+</body>
+</html>
