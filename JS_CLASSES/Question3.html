@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+</head>
+<body>
+
+<h2>Library Management System</h2>
+
+<h3>Issue a Book</h3>
+<input type="text" id="isbn" placeholder="Enter ISBN">
+<button onclick="issueBookByISBN()">Issue Book</button>
+
+<h3>Return a Book</h3>
+<input type="text" id="returnISBN" placeholder="Enter ISBN">
+<button onclick="returnBookByISBN()">Return Book</button>
+
+<h3>Available Books</h3>
+<div id="availableBooks"></div>
+
+<p id="message"></p>
+
+<script>
+"use strict";
+
+class Book {
+    constructor(title, author, ISBN, isIssued = false) {
+        this.title = title;
+        this.author = author;
+        this.ISBN = ISBN;
+        this.isIssued = isIssued;
+    }
+
+    issueBook() {
+        if (this.isIssued) {
+            return false;
+        }
+
+        this.isIssued = true;
+        return true;
+    }
+
+    returnBook() {
+        if (!this.isIssued) {
+            return false;
+        }
+
+        this.isIssued = false;
+        return true;
+    }
+}
+
+const books = [
+    new Book("JavaScript Basics", "John", "101"),
+    new Book("Python Programming", "Smith", "102"),
+    new Book("Web Development", "David", "103"),
+    new Book("Data Structures", "Robert", "104")
+];
+
+function displayAvailableBooks() {
+    const available = books.filter(book => !book.isIssued);
+    const output = document.getElementById("availableBooks");
+
+    if (available.length === 0) {
+        output.textContent = "No books are currently available.";
+        return;
+    }
+
+    output.innerHTML = available.map(book =>
+        `<p>${book.title} | ${book.author} | ISBN: ${book.ISBN}</p>`
+    ).join("");
+}
+
+function issueBookByISBN() {
+    const isbn = document.getElementById("isbn").value.trim();
+    const book = books.find(book => book.ISBN === isbn);
+    const message = document.getElementById("message");
+
+    if (!book) {
+        message.textContent = "Book not found!";
+    } else if (book.issueBook()) {
+        message.textContent = `${book.title} issued successfully!`;
+    } else {
+        message.textContent = "This book is already issued!";
+    }
+
+    displayAvailableBooks();
+}
+
+function returnBookByISBN() {
+    const isbn = document.getElementById("returnISBN").value.trim();
+    const book = books.find(book => book.ISBN === isbn);
+    const message = document.getElementById("message");
+
+    if (!book) {
+        message.textContent = "Book not found!";
+    } else if (book.returnBook()) {
+        message.textContent = `${book.title} returned successfully!`;
+    } else {
+        message.textContent = "This book was not issued!";
+    }
+
+    displayAvailableBooks();
+}
+
+displayAvailableBooks();
+</script>
+
+</body>
+</html>
