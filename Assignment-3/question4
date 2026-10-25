@@ -1,4 +1,14 @@
+"use strict";
 
+function showMessage() {
+    greeting = "Welcome"; // Error!
+    console.log(greeting);
+}
+
+showMessage();   showMessage();
+
+
+Reason: "use strict" prevents assigning a value to an undeclared variable. Since greeting was not declared using let, const, or var, JavaScript throws a ReferenceError 
 "use strict";
 
 function showMessage() {
@@ -7,3 +17,4 @@ function showMessage() {
 }
 
 showMessage();
+Welcome
