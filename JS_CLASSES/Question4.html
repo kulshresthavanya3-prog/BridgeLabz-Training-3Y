@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Form Builder</title>
+</head>
+<body>
+
+<h2>Dynamic Form Builder</h2>
+
+<div id="formContainer"></div>
+<button onclick="submitForm()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+"use strict";
+
+class FormBuilder {
+    constructor(fields) {
+        this.fields = fields;
+    }
+
+    createForm() {
+        let formHTML = "<form id='myForm'>";
+
+        for (let field of this.fields) {
+            formHTML += `
+                <label>${field.label}</label><br>
+                <input type="${field.type}" 
+                       name="${field.label}" 
+                       placeholder="Enter ${field.label}" required>
+                <br><br>
+            `;
+        }
+
+        formHTML += "</form>";
+
+        document.getElementById("formContainer").innerHTML = formHTML;
+    }
+
+    getFormData() {
+        let data = {};
+        let inputs = document.querySelectorAll("#myForm input");
+
+        for (let input of inputs) {
+            data[input.name] = input.value;
+        }
+
+        return data;
+    }
+}
+
+const fields = [
+    { type: "text", label: "Username" },
+    { type: "email", label: "Email" },
+    { type: "number", label: "Age" },
+    { type: "password", label: "Password" }
+];
+
+const builder = new FormBuilder(fields);
+builder.createForm();
+
+function submitForm() {
+    const data = builder.getFormData();
+
+    document.getElementById("result").textContent =
+        JSON.stringify(data, null, 2);
+}
+</script>
+
+</body>
+</html>
