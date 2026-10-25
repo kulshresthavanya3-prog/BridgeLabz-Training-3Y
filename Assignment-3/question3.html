@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+"use strict";
+
+const transactions = [
+    { id: 1, amount: 2000 },
+    { id: 2, amount: -500 },
+    { id: 3 },
+    null
+];
+
+let valid = [];
+let invalid = [];
+
+for (let i = 0; i < transactions.length; i++) {
+    let transaction = transactions[i];
+
+    debugger; // Breakpoint: inspect variables in browser DevTools
+
+    try {
+        if (transaction === null) {
+            throw new Error("NULL_ENTRY");
+        }
+
+        if (transaction.id === undefined ||
+            transaction.amount === undefined) {
+            throw new Error("MISSING_DATA");
+        }
+
+        if (transaction.amount < 0) {
+            throw new Error("NEGATIVE_AMOUNT");
+        }
+
+        valid.push(transaction);
+        console.log(`Transaction ${transaction.id} is VALID`);
+
+    } catch (error) {
+        invalid.push({
+            transaction: transaction,
+            error: error.message
+        });
+
+        console.log(`Transaction ${i + 1} FAILED: ${error.message}`);
+    }
+}
+
+console.log("----- FINAL REPORT -----");
+console.log("Valid transactions:", valid);
+console.log("Invalid transactions:", invalid);
+console.log("Successful count:", valid.length);
+console.log("Failed count:", invalid.length);
+</script>
+</body>
+</html>
