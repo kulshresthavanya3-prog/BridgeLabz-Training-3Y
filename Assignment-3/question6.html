@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+"use strict";
+
+let limit = Number(prompt("Enter pyramid size (default = 5):"));
+
+if (limit === 0 || !Number.isFinite(limit) || limit < 0) {
+    limit = 5;
+}
+
+let pattern = "";
+
+for (let i = 1; i <= limit; i++) {
+    for (let j = 1; j <= i; j++) {
+        pattern += "* ";
+    }
+    pattern += "\n";
+}
+
+console.log(pattern);
+</script>
+</body>
+</html>
+*
+* *
+* * *
+* * * *
