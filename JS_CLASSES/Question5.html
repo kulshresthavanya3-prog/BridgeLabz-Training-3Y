@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Movie Ticket Booking</h2>
+
+<form id="bookingForm">
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter name" required>
+
+    <label>Email:</label>
+    <input type="email" id="email" placeholder="Enter email" required>
+
+    <label>Seats (1-10):</label>
+    <input type="number" id="seats" min="1" max="10"
+           placeholder="Enter seats" required>
+
+    <button type="submit">Book Ticket</button>
+</form>
+
+<p id="message"></p>
+<div id="ticket"></div>
+
+<script>
+"use strict";
+
+const form = document.getElementById("bookingForm");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const seats = Number(document.getElementById("seats").value);
+
+    const namePattern = /^[A-Za-z]+$/;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const message = document.getElementById("message");
+    const ticket = document.getElementById("ticket");
+
+    ticket.innerHTML = "";
+
+    if (!namePattern.test(name)) {
+        message.textContent = "Name must contain alphabets only!";
+        message.className = "error";
+    }
+    else if (!emailPattern.test(email)) {
+        message.textContent = "Enter a valid email address!";
+        message.className = "error";
+    }
+    else if (!Number.isInteger(seats) || seats < 1 || seats > 10) {
+        message.textContent = "Seats must be between 1 and 10!";
+        message.className = "error";
+    }
+    else {
+        const booking = { name, email, seats };
+
+        message.textContent = "Booking successful!";
+        message.className = "success";
+
+        ticket.innerHTML = `
+            <h3>Movie Ticket Details</h3>
+            <p><b>Name:</b> ${booking.name}</p>
+            <p><b>Email:</b> ${booking.email}</p>
+            <p><b>Seats:</b> ${booking.seats}</p>
+        `;
+
+        console.log(booking);
+    }
+});
+</script>
+
+</body>
+</html>
