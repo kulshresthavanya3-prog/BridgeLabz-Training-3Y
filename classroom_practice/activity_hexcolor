@@ -1,0 +1,21 @@
+//////////////  task3 ////
+//task 3: generate random hex color value
+// background-color : #000000
+// background-color : #ffffff
+
+
+function generatehexcolor(){
+    let arr=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'];
+    let ans="#";
+
+    for(let i=1;i<7;i++){
+        let num = Math.floor(Math.random()*arr.length);
+        ans +=arr[num];
+
+         
+    }
+    console.log(ans);
+    document.body.style.backgroundColor = ans;
+    
+}
+generatehexcolor();
